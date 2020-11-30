@@ -1,9 +1,9 @@
 import React from 'react';
-const Header = () => {
+const Footer = () => {
   return (
     <div >
      it-kamasutra.com 
     </div>
   );
 }
-  export default Header;
+  export default Footer;
