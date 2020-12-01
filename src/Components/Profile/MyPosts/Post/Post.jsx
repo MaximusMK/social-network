@@ -7,8 +7,8 @@ const Post = (props) => {
       <img src="https://i.imgflip.com/1we5s5.jpg" alt="" />
           {props.massage}
       <div>
-      <div>{props.like}</div>
-        <span>like</span>
+      
+        <span>like</span> {props.likesCount}
       </div>
     </div>
   )
