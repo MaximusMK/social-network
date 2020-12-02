@@ -4,11 +4,15 @@ import Post from './Post/Post';
 
 const MyPosts = () => {
   return (
-    <div>
-      MyPosts
+    <div className={s.postsBlock}>
+      <h3>MyPosts</h3>
       <div>
-    <textarea></textarea>
-    <button>Button</button>
+    <div>
+      <textarea></textarea>
+    </div>
+    <div>
+      <button>Button</button>
+    </div>
 
     </div>
       <div className={s.posts}>
