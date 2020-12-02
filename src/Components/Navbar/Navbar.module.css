@@ -8,3 +8,7 @@
 .item.active{
   color: #f92;
 }
+a {
+  text-decoration: none;
+  color: #cdf6b2;
+}
