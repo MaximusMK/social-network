@@ -13,7 +13,7 @@ let state = {
 			{id: 1, name: 'Dimych'},
 			{id: 2, name: 'Andrey'},
 			{id: 3, name: 'Sveta'},
-			// {id: 4, name: 'Sasha'},
+			{id: 4, name: 'Sasha'},
 			{id: 5, name: 'Victor'},
 			{id: 6, name: 'Valera'},
 		],
@@ -23,6 +23,16 @@ let state = {
 			{id: 3, message: 'Good! ;)'},
 		],
 	}
+}
+
+export let addPost = (postMessage) => {
+	debugger;
+	let newPost = {
+		id: 5,
+		message: postMessage,
+		likesCount: 0,
+	};
+	state.profilePage.posts.push(newPost);
 }
 
 export default state;
