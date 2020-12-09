@@ -6,6 +6,9 @@
 .item {
   color: #fff;
 }
+.item:hover {
+  background-color: #138605;
+}
 .item a{
   color: #c8f3ac;
   text-decoration: none;

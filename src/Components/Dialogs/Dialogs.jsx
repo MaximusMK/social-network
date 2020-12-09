@@ -5,32 +5,34 @@ import Message from "./Message/Mesage";
 
 const Dialogs = (props) => {
 
-	let dialogsElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
-	let messagesElements = props.state.messages.map(m => <Message message={m.message}/>);
+    let dialogsElements = props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
+    let messagesElements = props.state.messages.map(m => <Message message={m.message}/>);
 
-	let newMassageElement = React.createRef();
+    let newMessageElement = React.createRef();
 
-	let addMassage = () => {
-		let massage = newMassageElement.current.value;
-		alert(massage);
+    let addMessage = () => {
+        props.addMessage();
+    }
+    let onMessageChange = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessageText(text);
+    }
+    return (
 
-	}
-	return (
+        <div className={s.dialogs}>
+            <div className={s.dialogItems}>
+                {dialogsElements}
+            </div>
+            <div className={s.messages}>
+                {messagesElements}
+            </div>
 
-		<div className={s.dialogs}>
+            <div>
+                <textarea onChange={onMessageChange} ref={newMessageElement} value={props.newMessageText}/>
+            </div>
+            <button onClick={addMessage}>Send massage</button>
 
-			<div>
-				<textarea ref={newMassageElement}></textarea>
-			</div>
-			<button onClick={addMassage}>Add massage</button>
-
-			<div className={s.dialogItems}>
-				{ dialogsElements }
-			</div>
-			<div className={s.messages}>
-				{ messagesElements }
-			</div>
-		</div>
-	)
+        </div>
+    )
 }
 export default Dialogs;

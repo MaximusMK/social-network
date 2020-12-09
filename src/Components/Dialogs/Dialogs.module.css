@@ -1,7 +1,6 @@
 .dialogs {
 	display: grid;
 	grid-template-columns: 2fr 10fr;
-
 }
 .dialogItems {
 	padding: 10px;
@@ -12,8 +11,15 @@
 }
 .messages {
 	padding: 10px;
-
 }
 .message {
 	padding: 5px;
+}
+button {
+	width: 100px;
+	color: #d0d0ee;
+	font-weight: 700;
+	background-color: #138605;
+	border: 0;
+	border-radius: 10px;
 }

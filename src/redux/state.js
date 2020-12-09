@@ -10,7 +10,7 @@ let state = {
 			{id: 2, message: "it's my first post", likesCount: 25},
 			{id: 3, message: "Good", likesCount: 3},
 		],
-		newPostText: 'IT-kamasutra.com',
+		newPostText: 'Enter your post',
 	},
 
 	dialogsPage: {
@@ -27,6 +27,7 @@ let state = {
 			{id: 2, message: 'How is your React learning?'},
 			{id: 3, message: 'Good! ;)'},
 		],
+		newMessageText: 'Enter your message',
 	}
 }
 
@@ -41,14 +42,24 @@ export let addPost = () => {
 	state.profilePage.posts.push(newPost);
 	state.profilePage.newPostText = '';
 	rerenderEntireTree(state);
-
 }
 
 export let updateNewPostText = (newText) => {
-
 	state.profilePage.newPostText = newText;
+	rerenderEntireTree(state);
+}
 
-
+export let addMessage = () => {
+	let newMessage = {
+		id: 4,
+		message: state.dialogsPage.newMessageText,
+	};
+	state.dialogsPage.messages.push(newMessage);
+	state.dialogsPage.newMessageText = '';
+	rerenderEntireTree(state);
+}
+export let updateNewMessageText = (newMessageText) => {
+	state.dialogsPage.newMessageText = newMessageText;
 	rerenderEntireTree(state);
 }
 
