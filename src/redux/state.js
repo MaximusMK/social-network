@@ -1,7 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE'; //ADD = SEND
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'; //TEXT == BODY
 
 let store = {
 
@@ -28,7 +28,7 @@ let store = {
                 {id: 2, message: 'How is your React learning?'},
                 {id: 3, message: 'Good! ;)'},
             ],
-            newMessageText: 'Enter your message',
+            newMessageText: '',
         }
     },
 	_callSubscriber() {
