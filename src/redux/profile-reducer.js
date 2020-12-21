@@ -7,7 +7,7 @@ let initialState = {
         // {id: 2, message: "it's my first post", likesCount: 25},
         {id: 3, message: "Good", likesCount: 3},
     ],
-        newPostText: ''
+        newPostText: '',
 }
 
 const profileReducer = (state= initialState, action) => {
@@ -25,7 +25,7 @@ const profileReducer = (state= initialState, action) => {
             state.newPostText = action.newText;
             return state;
         default:
-                return state;
+            return state;
     }
 
     return state;

@@ -7,10 +7,11 @@ import {BrowserRouter} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 let rerenderEntireTree = (state) => {
+    // debugger;
     ReactDOM.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App state={state}
+                <App store={store}
                      dispatch={store.dispatch.bind(store)}/>
             </React.StrictMode>,
         </BrowserRouter>, document.getElementById('root')
