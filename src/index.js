@@ -5,7 +5,8 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import {Provider} from "./StoreContext";
+import {Provider} from "react-redux";
+
 
 let rerenderEntireTree = () => {
     // debugger;
@@ -21,7 +22,7 @@ let rerenderEntireTree = () => {
     reportWebVitals();
 }
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree();
 
 store.subscribe( () => {
         rerenderEntireTree();
