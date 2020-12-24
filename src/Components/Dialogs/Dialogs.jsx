@@ -8,8 +8,8 @@ const Dialogs = (props) => {
 
     let state = props;
 
-    let dialogsElements = state.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = state.dialogsPage.messages.map(m => <Message message={m.message}/>);
+    let dialogsElements = state.dialogsPage.dialogs.map(d => <DialogItem name={d.name} key={d.id} id={d.id}/>);
+    let messagesElements = state.dialogsPage.messages.map(m => <Message message={m.message} key={m.id}/>);
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
