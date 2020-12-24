@@ -7,23 +7,13 @@ import {BrowserRouter} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 
-
-let rerenderEntireTree = () => {
-    // debugger;
-    ReactDOM.render(
-        <BrowserRouter>
-            <React.StrictMode>
-                <Provider store={store}>
-                    <App />
-                </Provider>
-            </React.StrictMode>,
-        </BrowserRouter>, document.getElementById('root')
-    );
-    reportWebVitals();
-}
-
-rerenderEntireTree();
-
-store.subscribe( () => {
-        rerenderEntireTree();
-});
+ReactDOM.render(
+    <BrowserRouter>
+        <React.StrictMode>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </React.StrictMode>,
+    </BrowserRouter>, document.getElementById('root')
+);
+reportWebVitals();
