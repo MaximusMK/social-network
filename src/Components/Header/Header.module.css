@@ -1,8 +1,22 @@
-.header{
+.header {
     grid-area: h;
     background: #138605;
-  }
-  .header img {
+    position: absolute;
+}
+
+.header img {
     width: 60px;
-      height: auto;
-  }
+    height: auto;
+}
+
+.loginBlock {
+    float: right;
+    position: relative;
+    top: -50px;
+    left: 500px;
+}
+.loginBlock a {
+    background-color: #138605;
+    color: #fff;
+    font-size: 20px;
+}
