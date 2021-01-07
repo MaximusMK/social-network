@@ -11,7 +11,6 @@ import UsersContainer from './Components/Users/UsersContainer';
 import HeaderContainer from "./Components/Header/HeaderContainer";
 
 const App = () => {
-	// debugger;
 	return (
 			<div className='app-wrapper'>
 				<HeaderContainer/>
