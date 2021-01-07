@@ -14,3 +14,17 @@ export const userAPI = {
             .then(response => response.data);
     }
 }
+
+export const profileAPI = {
+    getProfile(userId = 1) {
+        return instance.get(`profile/${userId}`)
+            .then(response => response.data);
+    }
+}
+
+export const headerAPI = {
+    getHeader() {
+        return instance.get(`auth/me`)
+            .then(response => response.data);
+    }
+}
