@@ -9,6 +9,7 @@ import Settings from "./Components/Settings/Settings";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from './Components/Users/UsersContainer';
 import HeaderContainer from "./Components/Header/HeaderContainer";
+import LoginPage from "./Components/Login/Login.gsx";
 
 const App = () => {
 	return (
@@ -22,6 +23,7 @@ const App = () => {
 					<Route path='/news' render={ () => <News />}/>
 					<Route path='/music' render={() => <Music />}/>
 					<Route path='/settings' render={ () => <Settings />}/>
+					<Route path='/login' render={ () => <LoginPage />}/>
 				</div>
 			</div>
 	);
