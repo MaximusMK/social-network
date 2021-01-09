@@ -20,7 +20,7 @@ const Dialogs = (props) => {
         props.updateNewMessageText(text);
     }
 
-    if(!props.isAuth) return <Redirect to={"/login"} />;
+    // if(!props.isAuth) return <Redirect to={"/login"} />; delete after L69
 
     return (
         <div className={s.dialogs}>
