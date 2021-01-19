@@ -3,32 +3,6 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../red
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
-// delete in L46 or latter
-// const MyPostsContainer = () => {
-//     // debugger;
-//     return (
-//         <StoreContext.Consumer>
-//             {(store) => {
-//
-//                 let state = store.getState();
-//                 let addPost = () => {
-//                     store.dispatch(addPostActionCreator());
-//                 }
-//                 let onPostChange = (text) => {
-//                     let action = updateNewPostTextActionCreator(text);
-//                     store.dispatch(action);
-//                 }
-//
-//                 return <MyPosts updateNewPostText={onPostChange}
-//                                 addPost={addPost}
-//                                 posts={state.profilePage.posts}
-//                                 newPostText={state.profilePage.newPostText}/>
-//             }
-//             }
-//         </StoreContext.Consumer>
-//     )
-// }
-
 let mapStateToProps = (state) => {
     return {
         posts: state.profilePage.posts,
@@ -37,11 +11,8 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () => {
-            dispatch(addPostActionCreator());
-        },
-        updateNewPostText: (text) => {
-            dispatch(updateNewPostTextActionCreator(text));
+        addPost: (newPostText) => {
+            dispatch(addPostActionCreator(newPostText));
         }
     }
 }
