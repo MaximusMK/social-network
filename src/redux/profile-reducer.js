@@ -64,7 +64,7 @@ export const updateStatus = (status) => (dispatch) => {
             if(response.data.resultCode === 0) {
                 dispatch(setStatus(status));
             } else  { //Delete after L75
-                console.log("updateStatus.resultCode === 1 ") //Delete after L7
+                console.log("updateStatus.resultCode === 1 ") //Delete after L75
             }
         });
 };
