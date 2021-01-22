@@ -8,3 +8,13 @@
 .formControl.error span {
     color: #f00;
 }
+
+.formSummaryError {
+    width: 100px;
+    background: #ddd;
+    border: 2px solid #d99;
+    border-radius: 10px;
+    color: #ff0000;
+    font-weight: 700;
+    text-align: center;
+}
