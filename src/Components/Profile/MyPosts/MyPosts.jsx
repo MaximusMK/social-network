@@ -12,7 +12,7 @@ const MyPosts = React.memo(props => {
         .map(p => <Post massage={p.message} likesCount={p.likesCount} key={p.id}/>)
 
     let onAddPost = (values) => {
-        this.props.addPost(values.newPostText);
+        props.addPost(values.newPostText);
     }
 
     return (
