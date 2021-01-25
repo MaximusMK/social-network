@@ -3,9 +3,17 @@ span {
     padding: 0 10px;
     color: #bbeeff;
 }
-.selectedPage {
+.pageNumber.selectedPage {
     font-size: 24px;
     font-weight: 700;
     padding: 10px;
     color: #ffffff;
 }
+.paginator {
+    margin: 10px;
+}
+.pageNumber {
+    padding: 2px;
+    border: 1px solid #0f0;
+}
+
