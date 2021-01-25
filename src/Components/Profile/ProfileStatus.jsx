@@ -1,5 +1,4 @@
 import React from 'react';
-import dialogReducer from "../../redux/dialog-reducer";
 
 class ProfileStatus extends React.Component {
     state = {
@@ -26,15 +25,12 @@ class ProfileStatus extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // debugger;
         if (prevProps.status !== this.props.status) {
             this.setState({status: this.props.status});
         }
-        console.log("componentDidUpdate");
     }
 
     render() {
-        console.log("render");
         return (
             <div>
                 {!this.state.editMode &&
@@ -44,7 +40,8 @@ class ProfileStatus extends React.Component {
                 }
                 {this.state.editMode &&
                     <div>
-                        <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode}
+                        <input onChange={this.onStatusChange} autoFocus={true}
+                               onBlur={this.deactivateEditMode}
                                value={this.state.status}/>
                     </div>
                 }

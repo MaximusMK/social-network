@@ -9,11 +9,12 @@ import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from './Components/Users/UsersContainer';
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import LoginPage from "./Components/Login/Login";
-import {connect} from "react-redux";
+import {connect, Provider} from "react-redux";
 import {compose} from "redux";
-import {Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
+import store from "./redux/redux-store";
 
 class App extends React.Component {
 	componentDidMount() {
@@ -46,6 +47,17 @@ const mapStateToProps = (state) => ({
 	initialized: state.app.initialized
 })
 
-export default compose(
+let AppContainer =  compose(
 	withRouter,
 	connect(mapStateToProps, {initializeApp}))(App);
+
+const SamuraiJSApp = (props) => {
+	return  <BrowserRouter>
+		<React.StrictMode>
+			<Provider store={store}>
+				<AppContainer />
+			</Provider>
+		</React.StrictMode>,
+	</BrowserRouter>
+}
+export default SamuraiJSApp;
