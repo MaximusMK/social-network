@@ -10,9 +10,10 @@ import style from "../common/FormsControls/FormsControls.module.css";
 const LoginForm = ({handleSubmit, error}) => {
     return (
         <form onSubmit={handleSubmit}>
-                {createField("Email", "email", Input, [required])}
-                {createField("Password", "password", Input, [required], {type: "password"})}
-                {createField(null, "rememberMe", Input, [], {type: "checkbox"}, "remember me")}
+                {createField("Email", "email",[required], Input)}
+                {createField("Password", "password",  [required], Input,{type: "password"})}
+                {createField(null, "rememberMe",  [], Input,{type: "checkbox"}, "remember me")}
+
                 {error && <div className={style.formSummaryError}>
                 {error}
             </div>}
